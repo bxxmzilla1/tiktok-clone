@@ -1,0 +1,55 @@
+.video-feed-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.video-feed-loading,
+.video-feed-empty {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #333;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.video-feed-empty p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #999;
+}
+
+.admin-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  background-color: #fe2c55;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.admin-link:hover {
+  background-color: #d91e45;
+}
+
